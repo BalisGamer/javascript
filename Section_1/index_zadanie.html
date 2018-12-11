@@ -14,25 +14,15 @@
             display: block;
             margin: 10px;
         }
-    
-        div {
-            width: 30px;
-            height: 30px;
-            background-color: black;
-            margin: 5px;
-            float: left;
-            color: white;
-            text-align: center;
-            line-height: 30px;
+
+        li{
+            font-size: 20px;
         }
 
-        .circle {
-            background-color: white;
-            border-radius: 50%;
-            color: black;
-            border: 2px solid black;
+        .big {
+            font-size: 30px;
         }
-    
+
     </style>
 
 </head>
@@ -40,19 +30,22 @@
 <body>
 
     <button>Kwadrat</button>
+    <ul>
+
+    </ul>
     <script>
         const btn = document.querySelector("button");
         let number = 1;
         const addElement = function () {
-            const div = document.createElement("div");
-            div.textContent = number;
+        const li = document.createElement("li");
+        li.textContent = number;
 
-            if (number % 5 == 0) {
-                div.classList.add("circle")
+            if (number % 3 == 0) {
+                li.classList.add("big")
             }
 
-            document.body.appendChild(div);
-            number ++;
+            //document.body.appendChild(li);
+            number += 2;
                 
         }
 
