@@ -30,6 +30,4 @@ const createLiElements = () => {
     }
 }
 
-
-
 init(addEventListener("click", createLiElements));
