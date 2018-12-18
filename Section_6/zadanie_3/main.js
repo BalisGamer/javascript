@@ -4,15 +4,30 @@ let divY = 50;
 div.style.left = `${divX}px`;
 div.style.top = `${divY}px`;
 
-div.addEventListener('mousedown', () => {
-    console.log("wcisniete");
+let drawActive = false;
+
+let insertDivX;
+let insertDivY;
+
+div.addEventListener('mousedown', (e) => {
+    div.style.backgroundColor = "gray";
+    drawActive = !drawActive;
+    insertDivX = e.offsetX;
+    insertDivY = e.offsetY;
+    
 })
 
-div.addEventListener('mousemove', () => {
-    console.log("ruszamy myszka");
+div.addEventListener('mousemove', (e) => {
+    if (drawActive) {
+        
+        divX = e.clientX - insertDivX;
+        divY = e.clientY - insertDivY;
+        div.style.left = `${divX}px`;
+        div.style.top = `${divY}px`;
+    }
 })
-
 
 div.addEventListener('mouseup', () => {
-    console.log("puscilem");
+    div.style. backgroundColor = "black";
+    drawActive = !drawActive;
 })
