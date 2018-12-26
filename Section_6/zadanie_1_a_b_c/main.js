@@ -16,6 +16,5 @@ document.body.addEventListener('mousemove', function(e) {
   document.body.style.backgroundColor = `rgb(${red}%, ${green}%, ${blue}%)`
 
   //document.body.style.backgroundColor = `rgb(${event.clientX}, ${event.clientY}, ${event.clientX/event.clientY * 20})`;
-	//update
 
 })
